@@ -4,7 +4,12 @@
   "description": "bootstrap v5 with sass",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass --no-source-map --watch scss:assets/css"
+    "compile": "sass --no-source-map --watch scss/iw-style.scss:assets/css/iw-style.css",
+    "compress": "sass --no-source-map --watch --style compressed scss/iw-style.scss:assets/css/iw-style.min.css",
+    "compile:iwdebug": "sass --no-source-map --watch scss/iw-style.scss:W:/Output/venus/Win32/debug/wwwroot/css/iw-style.css",
+    "compile:iwsource": "sass --no-source-map --watch scss/iw-style.scss:W:/Source/venus/account/source/intraweb/wwwroot/css/iw-style.css",
+    "compress:iwdebug": "sass --no-source-map --watch --style compressed scss/iw-style.scss:W:/Output/venus/Win32/debug/wwwroot/css/iw-style.min.css",
+    "compress:iwsource": "sass --no-source-map --watch --style compressed scss/iw-style.scss:W:/Source/venus/account/source/intraweb/wwwroot/css/iw-style.min.css"
   },
   "keywords": [
     "Bootstrap",

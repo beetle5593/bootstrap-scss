@@ -711,7 +711,7 @@ progress {
 	color: var(--ct-secondary-color);
 }
 .blockquote-footer::before {
-	content: "â€”Â ";
+	content: "— ";
 }
 .img-fluid {
 	max-width: 100%;

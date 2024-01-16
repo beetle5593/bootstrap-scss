@@ -1,0 +1,36 @@
+@if $enable-dark-mode {
+	// scss-docs-start theme-text-dark-map
+	$theme-colors-text-dark: map-merge(
+		$theme-colors-text-dark,
+		(
+			"purple": $purple-text-emphasis-dark,
+		)
+	);
+	// scss-docs-end theme-text-dark-map
+
+	// scss-docs-start theme-bg-subtle-dark-map
+	$theme-colors-bg-subtle-dark: map-merge(
+		$theme-colors-bg-subtle-dark,
+		(
+			"purple": $purple-bg-subtle-dark,
+		)
+	);
+	// scss-docs-end theme-bg-subtle-dark-map
+
+	// scss-docs-start theme-border-subtle-dark-map
+	$theme-colors-border-subtle-dark: map-merge(
+		$theme-colors-border-subtle-dark,
+		(
+			"purple": $purple-border-subtle-dark,
+		)
+	);
+	// scss-docs-end theme-border-subtle-dark-map
+}
+
+// Create your own map
+$theme-colors: map-merge(
+	$theme-colors,
+	(
+		"purple": $purple,
+	)
+);
