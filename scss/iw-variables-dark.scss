@@ -10,3 +10,6 @@ $purple-bg-subtle-dark: shade-color($purple, 80%) !default;
 // scss-docs-start theme-border-subtle-dark-variables
 $purple-border-subtle-dark: shade-color($purple, 40%) !default;
 // scss-docs-end theme-border-subtle-dark-variables
+
+$body-bg-dark: $gray-800 !default;
+$body-secondary-bg-dark: $gray-900 !default;

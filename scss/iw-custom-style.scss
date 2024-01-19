@@ -1,14 +1,40 @@
-// custom css
+/* Start Scrollbar */
+.simplebar,
+.dataTables_scrollBody {
+	&::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+	}
+	&::-webkit-scrollbar-track {
+		// background: transparent;
+		border-radius: 12px;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 12px;
+	}
+	&:hover {
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--#{$prefix}scrollbar-color);
+		}
+	}
+}
 
-// Scroll Bar
-body::-webkit-scrollbar {
-	width: 8px; /* width of the entire scrollbar */
+.scrollbar-none::-webkit-scrollbar {
+	display: none; /* Safari and Chrome */
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
 }
-body::-webkit-scrollbar-track {
-	background: transparent; /* color of the tracking area */
+/* End Scrollbar */
+
+/* Start Font Size */
+@mixin font-size($size) {
+	.font-#{$size} {
+		font-size: calc($size / 16) + rem;
+	}
 }
-body::-webkit-scrollbar-thumb {
-	background-color: var(--ct-primary-bg-subtle);/* color of the scroll thumb */
-	border-radius: 50px; /* roundness of the scroll thumb */
-	// border: 3px solid orange; /* creates padding around scroll thumb */
+
+$font-sizes: 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 40, 44, 48, 52, 56;
+@each $size in $font-sizes {
+	@include font-size($size);
 }
+/* End Font Size */

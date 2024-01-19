@@ -1,0 +1,10 @@
+:root,
+[data-bs-theme="light"] {
+	--#{$prefix}scrollbar-color: #{$secondary-border-subtle};
+}
+
+@if $enable-dark-mode {
+	@include color-mode(dark, true) {
+		--#{$prefix}scrollbar-color: #{$secondary-border-subtle-dark};
+	}
+}

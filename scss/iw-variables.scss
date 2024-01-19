@@ -1,16 +1,13 @@
 // Color system
-$white:    #fff !default;
-$gray-100: #f6f7fb !default;
-$gray-200: #eef2f7 !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #a1a9b1 !default;
-$gray-600: #8a969c !default;
-$gray-700: #6c757d !default;
-$gray-800: #343a40 !default;
-$gray-900: #313a46 !default;
-$black:    #000 !default;
 
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$gray-100: #f6f7fb !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start color-variables
 $blue: #2c8ef8 !default;
 $indigo: #727cf5 !default;
 $purple: #6b5eae !default;
@@ -21,79 +18,44 @@ $yellow: #ffc35a !default;
 $green: #0acf97 !default;
 $teal: #02a8b5 !default;
 $cyan: #39afd1 !default;
+// scss-docs-end color-variables
 
 $min-contrast-ratio: 2 !default;
 
+// scss-docs-start theme-color-variables
 $primary: $indigo !default;
-$secondary: $gray-700 !default;
-$light: $gray-200 !default;
+// scss-docs-end theme-colors-map
 
+// Prefix for :root CSS variables
 $variable-prefix: ct-; //override prefix
+$prefix: $variable-prefix !default;
 
 // Body
 //
 // Settings for the `<body>` element.
+$body-color: $gray-700 !default;
+$body-bg: $gray-100 !default;
 
-$body-color:                $gray-700 !default;
-$body-bg:                   #fafbfe !default;
+$body-secondary-bg: $white !default;
 
-// $body-secondary-color:      rgba($secondary, .75) !default;
-// $body-secondary-bg:         $white !default;
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
 
-// $body-tertiary-color:       rgba($black, .5) !default;
-// $body-tertiary-bg:          $gray-100 !default;
+// scss-docs-start font-variables
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-base: 0.9375rem !default; // Assumes the browser default, typically `16px`
 
-// $body-emphasis-color:       rgba($body-color, .75) !default;
+$h1-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.75 !default;
+$h3-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: $font-size-base !default;
+$h6-font-size: $font-size-base * 0.875 !default;
+// scss-docs-end font-variables
 
 // Links
 //
 // Style anchor elements.
-
-$link-decoration:                         none !default;
-$link-shade-percentage:                   10% !default;
-$link-hover-decoration:                   underline !default;
-// $body-font-weight: 400;
-// $body-line-height: 1.5;
-// $body-color: #6c757d;
-// $body-color-rgb: 108, 117, 125;
-// $body-bg: #fafbfe;
-// $body-bg-rgb: 250, 251, 254;
-// $body-emphasis-color: rgba(108, 117, 125, 0.75);
-// $secondary-color: rgba(108, 117, 125, 0.75);
-// $secondary-color-rgb: 108, 117, 125;
-// $body-secondary-bg: #fff;
-// $body-secondary-bg-rgb: 255, 255, 255;
-// $body-tertiary-color: #313539;
-// $body-tertiary-color-rgb: 49, 53, 57;
-// $tertiary-bg: #f6f7fb;
-// $tertiary-bg-rgb: 246, 247, 251;
-// $link-color: #727cf5;
-// $link-color-rgb: 114, 124, 245;
-// $link-decoration: none;
-// $link-hover-color: #6169d0;
-// $link-hover-color-rgb: 97, 105, 208;
-// $code-color: #39afd1;
-// $highlight-bg: #fff3de;
-// $border-width: 1px;
-// $border-style: solid;
-// $border-color: #dee2e6;
-// $border-color-translucent: #dee2e6;
-// $border-radius: 0.25rem;
-// $border-radius-sm: 0.2rem;
-// $border-radius-lg: 0.3rem;
-// $border-radius-xl: 1rem;
-// $border-radius-xxl: 2rem;
-// $border-radius-2xl: var($border-radius-xxl);
-// $border-radius-pill: 50rem;
-// $box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
-// $box-shadow-sm: 0 0.125rem 0.25rem rgba(var(--ct-body-color-rgb), 0.15);
-// $box-shadow-lg: 0 0 45px 0 rgba(var(--ct-body-color-rgb), 0.2);
-// $box-shadow-inset: inset 0 1px 2px rgba(var(--ct-body-color-rgb), 0.075);
-// $focus-ring-width: 0.15rem;
-// $focus-ring-opacity: 0.25;
-// $focus-ring-color: rgba(114, 124, 245, 0.25);
-// $font-size-base: 1rem;
-// $form-valid-color: #0acf97;
-// $form-valid-border-color: #0acf97;
-// $form-invalid-color: #fa5c7c;
-// $form-invalid-border-color: #fa5c7c;
+$link-decoration: none !default;
