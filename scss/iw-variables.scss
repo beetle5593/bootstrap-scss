@@ -95,6 +95,22 @@ $input-disabled-bg: var(--#{$prefix}body-bg) !default;
 $input-disabled-border-color: null !default;
 // scss-docs-end form-input-variables
 
+// Navbar
+
+// scss-docs-start navbar-variables
+$navbar-padding-y: 0 !default;
+// scss-docs-end navbar-variables
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+// scss-docs-start dropdown-variables
+$dropdown-padding-x: 0.5rem !default;
+$dropdown-bg: var(--#{$prefix}secondary-bg) !default;
+$dropdown-link-active-bg: var(--#{$prefix}tertiary-bg) !default;
+// scss-docs-end dropdown-variables
+
 // Cards
 
 // scss-docs-start card-variables
