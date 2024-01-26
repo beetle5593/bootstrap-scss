@@ -1,5 +1,18 @@
 :root {
+	--#{$prefix}logo-xl-height: 52px;
+	--#{$prefix}logo-lg-height: 48px;
+	--#{$prefix}logo-sm-height: 32px;
+
 	--#{$prefix}topbar-height: 60px;
+	--#{$prefix}sidebar-width: 250px;
+
+	--#{$prefix}menu-item-color: var(--#{$prefix}secondary);
+	--#{$prefix}menu-item-active-bg: var(--#{$prefix}primary);
+	--#{$prefix}menu-item-icon-width: 50px;
+	--#{$prefix}menu-item-icon-size: calc(#{$font-size-base} * 1.25);
+	--#{$prefix}menu-item-font-size: #{$font-size-base};
+	--#{$prefix}menu-item-padding-x: 8px;
+	--#{$prefix}menu-item-padding-y: 12px;
 
 	--#{$prefix}theme-card-border-width: 0px;
 }
@@ -12,5 +25,7 @@
 @if $enable-dark-mode {
 	@include color-mode(dark, true) {
 		--#{$prefix}scrollbar-color: #{$secondary-border-subtle-dark};
+
+		--#{$prefix}menu-item-color: #{$gray-500};
 	}
 }
