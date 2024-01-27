@@ -1,3 +1,7 @@
+:root {
+	--#{$prefix}theme-card-border-width: 0px;
+}
+
 :root,
 [data-bs-theme="light"] {
 	--#{$prefix}scrollbar-color: #{$secondary-border-subtle};

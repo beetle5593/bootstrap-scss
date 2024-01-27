@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
 :root,
 [data-bs-theme=light] {
   --ct-blue: #2c8ef8;
@@ -21,7 +22,7 @@
   --ct-gray-400: #ced4da;
   --ct-gray-500: #adb5bd;
   --ct-gray-600: #6c757d;
-  --ct-gray-700: #495057;
+  --ct-gray-700: #6c757d;
   --ct-gray-800: #343a40;
   --ct-gray-900: #212529;
   --ct-primary: #727cf5;
@@ -47,8 +48,8 @@
   --ct-info-text-emphasis: #174654;
   --ct-warning-text-emphasis: #664e24;
   --ct-danger-text-emphasis: #642532;
-  --ct-light-text-emphasis: #495057;
-  --ct-dark-text-emphasis: #495057;
+  --ct-light-text-emphasis: #6c757d;
+  --ct-dark-text-emphasis: #6c757d;
   --ct-primary-bg-subtle: #e3e5fd;
   --ct-secondary-bg-subtle: #e2e3e5;
   --ct-success-bg-subtle: #cef5ea;
@@ -67,25 +68,25 @@
   --ct-dark-border-subtle: #adb5bd;
   --ct-white-rgb: 255, 255, 255;
   --ct-black-rgb: 0, 0, 0;
-  --ct-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --ct-font-sans-serif: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --ct-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --ct-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --ct-body-font-family: var(--ct-font-sans-serif);
   --ct-body-font-size: 0.9375rem;
   --ct-body-font-weight: 400;
   --ct-body-line-height: 1.5;
-  --ct-body-color: #495057;
-  --ct-body-color-rgb: 73, 80, 87;
+  --ct-body-color: #6c757d;
+  --ct-body-color-rgb: 108, 117, 125;
   --ct-body-bg: #f6f7fb;
   --ct-body-bg-rgb: 246, 247, 251;
   --ct-emphasis-color: #000;
   --ct-emphasis-color-rgb: 0, 0, 0;
-  --ct-secondary-color: rgba(73, 80, 87, 0.75);
-  --ct-secondary-color-rgb: 73, 80, 87;
+  --ct-secondary-color: rgba(108, 117, 125, 0.75);
+  --ct-secondary-color-rgb: 108, 117, 125;
   --ct-secondary-bg: #fff;
   --ct-secondary-bg-rgb: 255, 255, 255;
-  --ct-tertiary-color: rgba(73, 80, 87, 0.5);
-  --ct-tertiary-color-rgb: 73, 80, 87;
+  --ct-tertiary-color: rgba(108, 117, 125, 0.5);
+  --ct-tertiary-color-rgb: 108, 117, 125;
   --ct-tertiary-bg: #f6f7fb;
   --ct-tertiary-bg-rgb: 246, 247, 251;
   --ct-heading-color: inherit;
@@ -160,7 +161,7 @@
   --ct-info-border-subtle: #22697d;
   --ct-warning-border-subtle: #997536;
   --ct-danger-border-subtle: #96374a;
-  --ct-light-border-subtle: #495057;
+  --ct-light-border-subtle: #6c757d;
   --ct-dark-border-subtle: #343a40;
   --ct-purple-border-subtle: #403868;
   --ct-heading-color: inherit;
@@ -169,12 +170,16 @@
   --ct-link-color-rgb: 170, 176, 249;
   --ct-link-hover-color-rgb: 187, 192, 250;
   --ct-code-color: #ffa4c3;
-  --ct-border-color: #495057;
+  --ct-border-color: #6c757d;
   --ct-border-color-translucent: rgba(255, 255, 255, 0.15);
   --ct-form-valid-color: #6ce2c1;
   --ct-form-valid-border-color: #6ce2c1;
   --ct-form-invalid-color: #fc9db0;
   --ct-form-invalid-border-color: #fc9db0;
+}
+
+:root {
+  --ct-theme-card-border-width: 0px;
 }
 
 :root,
@@ -222,7 +227,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
   color: var(--ct-heading-color);
 }
@@ -2113,7 +2118,7 @@ progress {
   line-height: 1.5;
   color: var(--ct-body-color);
   appearance: none;
-  background-color: var(--ct-body-bg);
+  background-color: var(--ct-secondary-bg);
   background-clip: padding-box;
   border: var(--ct-border-width) solid var(--ct-border-color);
   border-radius: var(--ct-border-radius);
@@ -2132,7 +2137,7 @@ progress {
 }
 .form-control:focus {
   color: var(--ct-body-color);
-  background-color: var(--ct-body-bg);
+  background-color: var(--ct-secondary-bg);
   border-color: #b9befa;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(114, 124, 245, 0.25);
@@ -2151,7 +2156,7 @@ progress {
   opacity: 1;
 }
 .form-control:disabled {
-  background-color: var(--ct-secondary-bg);
+  background-color: var(--ct-body-bg);
   opacity: 1;
 }
 .form-control::file-selector-button {
@@ -2263,7 +2268,7 @@ textarea.form-control-lg {
   line-height: 1.5;
   color: var(--ct-body-color);
   appearance: none;
-  background-color: var(--ct-body-bg);
+  background-color: var(--ct-secondary-bg);
   background-image: var(--ct-form-select-bg-img), var(--ct-form-select-bg-icon, none);
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -2287,7 +2292,7 @@ textarea.form-control-lg {
   background-image: none;
 }
 .form-select:disabled {
-  background-color: var(--ct-secondary-bg);
+  background-color: var(--ct-body-bg);
 }
 .form-select:-moz-focusring {
   color: transparent;
@@ -2337,7 +2342,7 @@ textarea.form-control-lg {
 }
 
 .form-check-input {
-  --ct-form-check-bg: var(--ct-body-bg);
+  --ct-form-check-bg: var(--ct-secondary-bg);
   width: 1em;
   height: 1em;
   margin-top: 0.25em;
@@ -2595,7 +2600,7 @@ textarea.form-control-lg {
   z-index: -1;
   height: 1.5em;
   content: "";
-  background-color: var(--ct-body-bg);
+  background-color: var(--ct-secondary-bg);
   border-radius: var(--ct-border-radius);
 }
 .form-floating > .form-control:-webkit-autofill ~ label {
@@ -2611,7 +2616,7 @@ textarea.form-control-lg {
 }
 .form-floating > :disabled ~ label::after,
 .form-floating > .form-control:disabled ~ label::after {
-  background-color: var(--ct-secondary-bg);
+  background-color: var(--ct-body-bg);
 }
 
 .input-group {
@@ -3905,7 +3910,7 @@ textarea.form-control-lg {
   --ct-navbar-toggler-padding-y: 0.25rem;
   --ct-navbar-toggler-padding-x: 0.75rem;
   --ct-navbar-toggler-font-size: 1.171875rem;
-  --ct-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2873, 80, 87, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  --ct-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28108, 117, 125, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   --ct-navbar-toggler-border-color: rgba(var(--ct-emphasis-color-rgb), 0.15);
   --ct-navbar-toggler-border-radius: var(--ct-border-radius);
   --ct-navbar-toggler-focus-width: 0.25rem;
@@ -4321,18 +4326,18 @@ textarea.form-control-lg {
   --ct-card-title-spacer-y: 0.5rem;
   --ct-card-title-color: ;
   --ct-card-subtitle-color: ;
-  --ct-card-border-width: var(--ct-border-width);
+  --ct-card-border-width: var(--ct-theme-card-border-width);
   --ct-card-border-color: var(--ct-border-color-translucent);
   --ct-card-border-radius: var(--ct-border-radius);
   --ct-card-box-shadow: ;
-  --ct-card-inner-border-radius: calc(var(--ct-border-radius) - (var(--ct-border-width)));
-  --ct-card-cap-padding-y: 0.5rem;
+  --ct-card-inner-border-radius: calc(var(--ct-border-radius) - (var(--ct-theme-card-border-width)));
+  --ct-card-cap-padding-y: 1rem;
   --ct-card-cap-padding-x: 1rem;
-  --ct-card-cap-bg: rgba(var(--ct-body-color-rgb), 0.03);
+  --ct-card-cap-bg: rgba(var(--ct-secondary-bg), 0.03);
   --ct-card-cap-color: ;
   --ct-card-height: ;
   --ct-card-color: ;
-  --ct-card-bg: var(--ct-body-bg);
+  --ct-card-bg: var(--ct-secondary-bg);
   --ct-card-img-overlay-padding: 1rem;
   --ct-card-group-margin: 0.75rem;
   position: relative;
@@ -4514,7 +4519,7 @@ textarea.form-control-lg {
   --ct-accordion-btn-padding-y: 1rem;
   --ct-accordion-btn-color: var(--ct-body-color);
   --ct-accordion-btn-bg: var(--ct-accordion-bg);
-  --ct-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23495057'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --ct-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236c757d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --ct-accordion-btn-icon-width: 1.25rem;
   --ct-accordion-btn-icon-transform: rotate(-180deg);
   --ct-accordion-btn-icon-transition: transform 0.2s ease-in-out;
